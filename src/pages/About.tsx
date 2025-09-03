@@ -1,5 +1,10 @@
 import React from 'react';
 import banner2 from '../assets/images/banner 2.png';
+import interior1 from '../assets/images/interior 1.png';
+import interior2 from '../assets/images/interior 2.png';
+import icon5 from '../assets/icons/icon 5.png';
+import icon6 from '../assets/icons/icon 6.png';
+import icon7 from '../assets/icons/icon 7.png';
 import { ScrollReveal } from '../components/ScrollReveal';
 
 const About: React.FC = () => {
@@ -13,7 +18,7 @@ const About: React.FC = () => {
           bg-center bg-cover bg-no-repeat
           bg-[position:50%_35%]
         "
-        style={{ backgroundImage: "url('/src/assets/images/banner 2.png')" }}
+        style={{ backgroundImage: `url(${banner2})` }}
       >
         {/* Improved overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-transparent"></div>
@@ -57,7 +62,7 @@ const About: React.FC = () => {
             <div className="relative w-full max-w-[560px] aspect-[4/3] mx-auto">
               {/* Ảnh trên (trước) */}
               <img
-                src="/src/assets/images/interior 1.png"
+                src={interior1}
                 alt="Workshop Interior Top View"
                 loading="lazy"
                 decoding="async"
@@ -66,7 +71,7 @@ const About: React.FC = () => {
 
               {/* Ảnh dưới (sau) */}
               <img
-                src="/src/assets/images/interior 2.png"
+                src={interior2}
                 alt="Workshop Interior Bottom View"
                 loading="lazy"
                 decoding="async"
@@ -109,7 +114,7 @@ const About: React.FC = () => {
               <div className="text-center p-8 group">
                 <div className="w-24 h-24 sm:w-28 sm:h-28 bg-brand-cream rounded-lg flex items-center justify-center mx-auto mb-6 transition-transform duration-300 hover:scale-[1.03] focus-visible:ring-2 ring-brand-gold/60">
                   <img
-                    src="/src/assets/icons/icon 5.png"
+                    src={icon5}
                     alt="Modern Machine"
                     loading="lazy"
                     className="w-12 h-12 sm:w-14 sm:h-14"
@@ -129,7 +134,7 @@ const About: React.FC = () => {
               <div className="text-center p-8 group">
                 <div className="w-24 h-24 sm:w-28 sm:h-28 bg-brand-cream rounded-lg flex items-center justify-center mx-auto mb-6 transition-transform duration-300 hover:scale-[1.03] focus-visible:ring-2 ring-brand-gold/60">
                   <img
-                    src="/src/assets/icons/icon 6.png"
+                    src={icon6}
                     alt="Quality Control"
                     loading="lazy"
                     className="w-12 h-12 sm:w-14 sm:h-14"
@@ -149,7 +154,7 @@ const About: React.FC = () => {
               <div className="text-center p-8 group">
                 <div className="w-24 h-24 sm:w-28 sm:h-28 bg-brand-cream rounded-lg flex items-center justify-center mx-auto mb-6 transition-transform duration-300 hover:scale-[1.03] focus-visible:ring-2 ring-brand-gold/60">
                   <img
-                    src="/src/assets/icons/icon 7.png"
+                    src={icon7}
                     alt="Expert Craftsmanship"
                     loading="lazy"
                     className="w-12 h-12 sm:w-14 sm:h-14"

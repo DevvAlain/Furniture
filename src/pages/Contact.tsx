@@ -1,5 +1,10 @@
 import React from 'react';
-// import banner2 from '../assets/images/banner 2.png';
+import banner2 from '../assets/images/banner 2.png';
+import img2 from '../assets/images/img 2.png';
+import icon1 from '../assets/icons/icon 1.png';
+import icon2 from '../assets/icons/icon 2.png';
+import icon3 from '../assets/icons/icon 3.png';
+import icon4 from '../assets/icons/icon 4.png';
 import { ScrollReveal } from '../components/ScrollReveal';
 
 const Contact: React.FC = () => {
@@ -13,7 +18,7 @@ const Contact: React.FC = () => {
           bg-center bg-cover bg-no-repeat
           bg-[position:50%_35%]
         "
-        style={{ backgroundImage: "url('/src/assets/images/banner 2.png')" }}
+        style={{ backgroundImage: `url(${banner2})` }}
       >
         {/* Improved overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-transparent"></div>
@@ -48,21 +53,13 @@ const Contact: React.FC = () => {
                 <div className="space-y-5">
                   <div className="flex items-center gap-4">
                     <div className="w-11 h-11 bg-[#C5AE63] rounded-full flex items-center justify-center">
-                      <img
-                        src="/src/assets/icons/icon 1.png"
-                        alt="Phone"
-                        className="w-5 h-5"
-                      />
+                      <img src={icon1} alt="Phone" className="w-5 h-5" />
                     </div>
                     <span className="text-slate-700 text-lg">1900 1602</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-11 h-11 bg-[#C5AE63] rounded-full flex items-center justify-center">
-                      <img
-                        src="/src/assets/icons/icon 2.png"
-                        alt="Email"
-                        className="w-5 h-5"
-                      />
+                      <img src={icon2} alt="Email" className="w-5 h-5" />
                     </div>
                     <span className="text-slate-700 text-lg">
                       furniture@gmail.com
@@ -70,11 +67,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-11 h-11 bg-[#C5AE63] rounded-full flex items-center justify-center">
-                      <img
-                        src="/src/assets/icons/icon 3.png"
-                        alt="Website"
-                        className="w-5 h-5"
-                      />
+                      <img src={icon3} alt="Website" className="w-5 h-5" />
                     </div>
                     <span className="text-slate-700 text-lg">
                       furniture.com
@@ -82,11 +75,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-11 h-11 bg-[#C5AE63] rounded-full flex items-center justify-center">
-                      <img
-                        src="/src/assets/icons/icon 4.png"
-                        alt="Location"
-                        className="w-5 h-5"
-                      />
+                      <img src={icon4} alt="Location" className="w-5 h-5" />
                     </div>
                     <span className="text-slate-700 text-lg">
                       Tam Phước, huyện Long Thành, tỉnh Đồng Nai
@@ -98,7 +87,7 @@ const Contact: React.FC = () => {
               {/* RIGHT: image (show full, no crop) */}
               <div className="relative min-h-[320px] md:min-h-[420px] flex items-center justify-center bg-white">
                 <img
-                  src="/src/assets/images/img 2.png" // nên tránh khoảng trắng trong tên file
+                  src={img2}
                   alt="Kitchen Interior"
                   className="w-full h-full object-contain"
                   loading="lazy"
