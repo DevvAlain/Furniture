@@ -2,6 +2,10 @@ import React from 'react';
 import banner2 from '../assets/images/banner 2.png';
 import interior1 from '../assets/images/interior 1.png';
 import interior2 from '../assets/images/interior 2.png';
+import icon1 from '../assets/icons/icon 1.png';
+import icon2 from '../assets/icons/icon 2.png';
+import icon3 from '../assets/icons/icon 3.png';
+import icon4 from '../assets/icons/icon 4.png';
 import icon5 from '../assets/icons/icon 5.png';
 import icon6 from '../assets/icons/icon 6.png';
 import icon7 from '../assets/icons/icon 7.png';
@@ -248,7 +252,7 @@ const About: React.FC = () => {
           <div className="hidden lg:flex flex-col gap-4 absolute inset-y-0 left-1/2 -translate-x-5 justify-center z-20">
             <div className="flex items-center group">
               <div className="w-9 h-9 bg-brand-gold rounded-full flex items-center justify-center shadow mr-3 transition-transform duration-300 group-hover:scale-110">
-                📞
+                <img src={icon1} alt="Phone" className="w-4 h-4" />
               </div>
               <span className="text-white text-base drop-shadow">
                 1900 1602
@@ -256,7 +260,7 @@ const About: React.FC = () => {
             </div>
             <div className="flex items-center group">
               <div className="w-9 h-9 bg-brand-gold rounded-full flex items-center justify-center shadow mr-3 transition-transform duration-300 group-hover:scale-110">
-                ✉️
+                <img src={icon2} alt="Email" className="w-4 h-4" />
               </div>
               <span className="text-white text-base drop-shadow">
                 furniture@gmail.com
@@ -264,7 +268,7 @@ const About: React.FC = () => {
             </div>
             <div className="flex items-center group">
               <div className="w-9 h-9 bg-brand-gold rounded-full flex items-center justify-center shadow mr-3 transition-transform duration-300 group-hover:scale-110">
-                🌐
+                <img src={icon3} alt="Website" className="w-4 h-4" />
               </div>
               <span className="text-white text-base drop-shadow">
                 furniture.com
@@ -272,7 +276,7 @@ const About: React.FC = () => {
             </div>
             <div className="flex items-center group">
               <div className="w-9 h-9 bg-brand-gold rounded-full flex items-center justify-center shadow mr-3 transition-transform duration-300 group-hover:scale-110">
-                📍
+                <img src={icon4} alt="Location" className="w-4 h-4" />
               </div>
               <span className="text-white text-base drop-shadow max-w-[320px]">
                 Tam Phước, huyện Long Thành, tỉnh Đồng Nai
