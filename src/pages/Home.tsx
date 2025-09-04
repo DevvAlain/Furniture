@@ -55,7 +55,7 @@ const Home: React.FC = () => {
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: `url(${workshopBanner})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/35"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/35 to-black/50"></div>
         <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-6 md:px-8">
           <motion.div
             className="max-w-5xl mx-auto"
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
             variants={staggerContainer}
           >
             <motion.h1
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] bg-gradient-to-r from-white via-yellow-100 to-yellow-200 bg-clip-text text-transparent"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.3] text-white drop-shadow-2xl"
               variants={fadeInUp}
               transition={defaultTransition}
             >
@@ -73,17 +73,21 @@ const Home: React.FC = () => {
               designing premium wooden furniture
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl lg:text-3xl text-yellow-300 font-light mb-12 drop-shadow-lg max-w-3xl mx-auto"
+              className="text-xl sm:text-2xl md:text-3xl text-yellow-300 font-normal mb-8 max-w-3xl mx-auto"
+              style={{
+                textShadow:
+                  '2px 2px 8px rgba(0, 0, 0, 0.8), 0px 0px 16px rgba(0, 0, 0, 0.6)',
+              }}
               variants={fadeInUp}
               transition={defaultTransition}
             >
               Crafted with precision, built to last
             </motion.p>
             <motion.button
-              className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-12 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300"
+              className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-800 text-white px-12 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:shadow-yellow-500/40 transition-all duration-300 transform hover:scale-105"
               variants={fadeInUp}
               transition={defaultTransition}
-              whileHover={{ scale: 1.05, y: -2 }}
+              whileHover={{ scale: 1.08, y: -3 }}
               whileTap={{ scale: 0.95 }}
             >
               Learn More
@@ -293,21 +297,14 @@ const Home: React.FC = () => {
                   </div>
                 </div>
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-yellow-400/20 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
-              <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-yellow-500/30 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-24 px-6 md:px-8 bg-white relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-100/30 rounded-full"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-yellow-200/20 rounded-full"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
+      <section className="py-24 px-6 md:px-8 bg-gradient-to-r from-gray-50 to-gray-100">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
             initial="hidden"
@@ -332,16 +329,6 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               {/* Floating badge */}
-              <motion.div
-                className="absolute -right-6 top-[-3.75rem] md:top-[-4.5rem]
-             bg-gradient-to-r from-yellow-500 to-yellow-600
-             text-white px-8 py-4 rounded-full font-bold shadow-2xl"
-                initial={{ scale: 0, rotate: -180 }}
-                whileInView={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-              >
-                ⭐ Premium Quality
-              </motion.div>
             </motion.div>
 
             <motion.div variants={fadeInRight} className="space-y-8">
@@ -423,9 +410,6 @@ const Home: React.FC = () => {
             className="bg-gradient-to-br from-[#F5EEE8] to-[#F0E6D6] relative"
             variants={fadeInLeft}
           >
-            <div className="absolute top-10 right-10 w-24 h-24 bg-yellow-300 rounded-full opacity-20"></div>
-            <div className="absolute bottom-16 left-8 w-16 h-16 bg-yellow-400 rounded-full opacity-25"></div>
-
             <div className="max-w-[680px] py-16 lg:py-24 px-8 lg:pl-20 lg:pr-10 relative z-10 space-y-8">
               <motion.p
                 className="text-yellow-600 text-sm font-bold tracking-widest uppercase"
@@ -449,71 +433,6 @@ const Home: React.FC = () => {
                 our expert team and discover how we can create exceptional
                 pieces for your space.
               </motion.p>
-
-              {/* Contact list for mobile/tablet */}
-              <motion.div
-                className="mt-8 space-y-4 lg:hidden"
-                variants={staggerContainer}
-              >
-                <motion.div
-                  className="flex items-center group"
-                  variants={fadeInUp}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#C5AE63] to-[#B79E55] rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300 p-2">
-                    <img
-                      src={icon1}
-                      alt="Phone"
-                      className="w-6 h-6 object-contain"
-                    />
-                  </div>
-                  <span className="text-[#2c2c2c] font-medium">1900 1602</span>
-                </motion.div>
-                <motion.div
-                  className="flex items-center group"
-                  variants={fadeInUp}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#C5AE63] to-[#B79E55] rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300 p-2">
-                    <img
-                      src={icon2}
-                      alt="Email"
-                      className="w-6 h-6 object-contain"
-                    />
-                  </div>
-                  <span className="text-[#2c2c2c] font-medium">
-                    furniture@gmail.com
-                  </span>
-                </motion.div>
-                <motion.div
-                  className="flex items-center group"
-                  variants={fadeInUp}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#C5AE63] to-[#B79E55] rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300 p-2">
-                    <img
-                      src={icon3}
-                      alt="Website"
-                      className="w-6 h-6 object-contain"
-                    />
-                  </div>
-                  <span className="text-[#2c2c2c] font-medium">
-                    furniture.com
-                  </span>
-                </motion.div>
-                <motion.div
-                  className="flex items-center group"
-                  variants={fadeInUp}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#C5AE63] to-[#B79E55] rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300 p-2">
-                    <img
-                      src={icon4}
-                      alt="Location"
-                      className="w-6 h-6 object-contain"
-                    />
-                  </div>
-                  <span className="text-[#2c2c2c] font-medium">
-                    Tam Phước, huyện Long Thành, tỉnh Đồng Nai
-                  </span>
-                </motion.div>
-              </motion.div>
             </div>
           </motion.div>
 
@@ -531,14 +450,87 @@ const Home: React.FC = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-l from-black/50 to-black/30"></div>
 
-            {/* Floating elements on image */}
+            {/* Mobile contact overlay on image */}
             <motion.div
-              className="absolute top-8 right-8 bg-white/20 backdrop-blur-sm rounded-full p-4"
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
+              className="lg:hidden absolute inset-0 flex flex-col justify-center px-6 space-y-4"
+              variants={staggerContainer}
             >
-              <span className="text-white text-2xl">🏭</span>
+              <motion.div
+                className="flex items-center group"
+                variants={fadeInUp}
+              >
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-r from-[#C5AE63] to-[#B79E55] rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300 p-2"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img
+                    src={icon1}
+                    alt="Phone"
+                    className="w-5 h-5 object-contain"
+                  />
+                </motion.div>
+                <span className="text-white font-semibold drop-shadow-lg">
+                  1900 1602
+                </span>
+              </motion.div>
+              <motion.div
+                className="flex items-center group"
+                variants={fadeInUp}
+              >
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-r from-[#C5AE63] to-[#B79E55] rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300 p-2"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img
+                    src={icon2}
+                    alt="Email"
+                    className="w-5 h-5 object-contain"
+                  />
+                </motion.div>
+                <span className="text-white font-semibold drop-shadow-lg">
+                  furniture@gmail.com
+                </span>
+              </motion.div>
+              <motion.div
+                className="flex items-center group"
+                variants={fadeInUp}
+              >
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-r from-[#C5AE63] to-[#B79E55] rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300 p-2"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img
+                    src={icon3}
+                    alt="Website"
+                    className="w-5 h-5 object-contain"
+                  />
+                </motion.div>
+                <span className="text-white font-semibold drop-shadow-lg">
+                  furniture.com
+                </span>
+              </motion.div>
+              <motion.div
+                className="flex items-center group"
+                variants={fadeInUp}
+              >
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-r from-[#C5AE63] to-[#B79E55] rounded-full flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300 p-2"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img
+                    src={icon4}
+                    alt="Location"
+                    className="w-5 h-5 object-contain"
+                  />
+                </motion.div>
+                <span className="text-white font-semibold drop-shadow-lg">
+                  Tam Phước, huyện Long Thành, tỉnh Đồng Nai
+                </span>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
@@ -560,7 +552,7 @@ const Home: React.FC = () => {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
-              <img src={icon1} alt="Phone" className="w-8 h-8 object-contain" />
+              <img src={icon1} alt="Phone" className="w-6 h-6 object-contain" />
             </motion.div>
             <span className="text-white drop-shadow-lg font-semibold">
               1900 1602
@@ -575,7 +567,7 @@ const Home: React.FC = () => {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
-              <img src={icon2} alt="Email" className="w-8 h-8 object-contain" />
+              <img src={icon2} alt="Email" className="w-6 h-6 object-contain" />
             </motion.div>
             <span className="text-white drop-shadow-lg font-semibold">
               furniture@gmail.com
@@ -593,7 +585,7 @@ const Home: React.FC = () => {
               <img
                 src={icon3}
                 alt="Website"
-                className="w-8 h-8 object-contain"
+                className="w-6 h-6 object-contain"
               />
             </motion.div>
             <span className="text-white drop-shadow-lg font-semibold">
@@ -612,7 +604,7 @@ const Home: React.FC = () => {
               <img
                 src={icon4}
                 alt="Location"
-                className="w-8 h-8 object-contain"
+                className="w-6 h-6 object-contain"
               />
             </motion.div>
             <span className="text-white drop-shadow-lg max-w-[320px] font-semibold">
